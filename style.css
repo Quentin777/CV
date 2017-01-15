@@ -1,0 +1,535 @@
+/* Layout */
+
+* {
+  box-sizing: border-box; /* pour maîtriser width et flex-basis */
+}
+
+html {
+  display: flex; flex-direction: column; /* correction bug IE de min-height non appliqué à body */
+}
+
+body{
+  margin: auto;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex; /* crée un contexte flex pour ses enfants */
+  flex-direction: column; /* affichage vertical */
+}
+
+.wrapper {
+  flex: 1 1 auto; /* occupe la hauteur restante */
+  display: flex; /* crée un contexte flex pour ses enfants */
+}
+
+
+
+nav,
+aside {
+  width: 10em;
+  text-align: center;
+}
+
+article {
+  flex: 1; /* occupe la largeur restante */
+  text-align: center;
+}
+
+nav {
+  order: -1; /* nav s'affiche en premier */
+  width: 250px;
+  text-align: center;
+}
+
+h1{
+  text-align: center;
+  box-shadow: 10px;
+}
+
+h3{
+  border: solid, white 1px;
+
+}
+
+h3:hover, h3:focus, #SVGPhone:hover{
+  color: white;
+}
+
+a:hover, a:focus {
+  color: white;
+}
+
+h4{
+  color: white;
+}
+
+.bordure{
+  border-bottom: solid white 1px;
+  padding: 20px;
+
+}
+
+.bordure:hover{
+  background-color: white;
+  color:black;
+}
+
+#photo{
+
+  border-radius: 2000px;
+}
+
+/***************************************************************************************************************************/
+/***************************************************************************************************************************/
+/***************************************************************************************************************************/
+/*Keyframe*/
+
+/*voir avec le Z-index*/
+/* faire disparaitre le chat a la fin de l'animation */
+
+
+#Nyan{
+  display: flex;
+  animation-name: Nyan;
+  animation-direction: normal;
+  animation: Nyan 10s linear 0s infinite;
+  z-index: 1;
+}
+
+#test{
+  height: 10px;
+  width: 1px;
+  animation-name: test;
+  animation-direction: normal;
+  animation: test 1s infinite;
+  background-color: black;
+}
+
+#Nuage{
+  animation-name: nuage;
+  animation-direction: normal;
+  animation: nuage 20s linear 0s infinite;
+  z-index: 3;
+}
+
+#NuageA{
+  animation-name: nuageA;
+  animation-direction: normal;
+  animation: nuageA 20s linear 0s infinite;
+  z-index: 3;
+}
+
+#NuageB{
+  animation-name: nuageB;
+  animation-direction: normal;
+  animation: nuageB 20s linear 0s infinite;
+  z-index: 3;
+}
+
+#NuageC{
+  animation-name: nuageC;
+  animation-direction: normal;
+  animation: nuageC 20s linear 0s infinite;
+  z-index: 3;
+}
+
+
+#NuageD{
+  animation-name: nuageD;
+  animation-direction: normal;
+  animation: nuageD 20s linear 0s infinite;
+  z-index: 3;
+}
+
+#carre{
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  animation-name: carre;
+  animation-direction: normal;
+  animation: carre 2s linear 0s infinite;
+}
+
+#carreA{
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  animation-name: carreA;
+  animation-direction: normal;
+  animation: carreA 2.3s linear 0s infinite;
+}
+
+#carreB{
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  animation-name: carreB;
+  animation-direction: normal;
+  animation: carreB 2.5s linear 0s infinite;
+}
+
+#carreC{
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  animation-name: carreC;
+  animation-direction: normal;
+  animation: carreC 2.7s linear 0s infinite;
+}
+
+#carreD{
+  width: 20px;
+  height: 20px;
+  background-color: green;
+  animation-name: carreD;
+  animation-direction: normal;
+  animation: carreD 2.9s linear 0s infinite;
+}
+
+
+@keyframes test{
+
+  0% {
+    transform:  translate(300px,-200px)  rotate(200deg) ;
+  }
+  
+  100% {
+    transform:  translate(100px,0px)  rotate(200deg); 
+
+}
+}
+
+@keyframes nuage{
+
+  0% {
+    transform:  translate(-200px,-270px)  rotate(0deg) ;
+  }
+
+  100% {
+    transform:  translate(1000px,-270px)  rotate(0deg); 
+
+}
+}
+
+
+@keyframes nuageA{
+
+  0% {
+    transform:  translate(-100px,-260px)  rotate(0deg) ;
+  }
+
+  100% {
+    transform:  translate(1200px,-260px)  rotate(0deg); 
+
+}
+}
+
+@keyframes nuageB{
+
+  0% {
+    transform:  translate(60px,-270px)  rotate(0deg) ;
+  }
+
+  100% {
+    transform:  translate(1400px,-270px)  rotate(0deg); 
+
+}
+}
+
+
+@keyframes nuageC{
+
+  0% {
+    transform:  translate(150px,-268px)  rotate(0deg) ;
+  }
+
+  100% {
+    transform:  translate(1400px,-268px)  rotate(0deg); 
+
+}
+}
+
+@keyframes nuageD{
+
+  0% {
+    transform:  translate(200px,-268px)  rotate(0deg) ;
+  }
+
+  100% {
+    transform:  translate(1400px,-268px)  rotate(0deg); 
+
+}
+}
+
+@keyframes Nyan{
+
+  0% {
+    transform:  translate(-100px,0px)  rotate(0deg) ;
+  }
+  
+  10% {
+    transform:  translate(20px,0px)  rotate(0deg) ;
+  }
+
+  20% {
+    transform:  translate(200px,-100px)  rotate(0deg) ;
+  }
+
+  40% {
+    transform:  translate(400px,0px)  rotate(360deg) ;
+  }
+
+  60% {
+    transform:  translate(500px,-100px)  rotate(0deg) ;
+  }
+
+  80% {
+    transform:  translate(600px,0px)  rotate(0deg) ;
+  }
+
+  90% {
+    transform:  translate(800px,-100px)  rotate(0deg) ;
+  }
+
+  100% {
+    transform:  translate(1100px,0px)  rotate(0deg) ;
+
+}
+}
+
+@keyframes carre{
+
+  0% {
+    transform:  translate(0px,0px)  rotate(0deg) ;
+  }
+  
+  100% {
+    transform:  translate(1000px,0px)  rotate(360deg) ;
+
+}
+}
+
+@keyframes carreA{
+
+  0% {
+    transform:  translate(0px,20px)  rotate(0deg) ;
+  }
+  
+  100% {
+    transform:  translate(1000px,20px)  rotate(360deg) ;
+
+}
+}
+
+@keyframes carreB{
+
+  0% {
+    transform:  translate(0px,40px)  rotate(0deg) ;
+  }
+  
+  100% {
+    transform:  translate(1000px,40px)  rotate(360deg) ;
+}
+}
+
+@keyframes carreC{
+
+  0% {
+    transform:  translate(0px,60px)  rotate(0deg) ;
+  }
+  
+  100% {
+    transform:  translate(1000px,60px)  rotate(360deg) ;
+
+}
+}
+
+@keyframes carreD{
+
+  0% {
+    transform:  translate(0px,80px)  rotate(0deg) ;
+  }
+  
+  100% {
+    transform:  translate(1000px,80px)  rotate(360deg) ;
+
+}
+}
+
+/***************************************************************************************************************************/
+/***************************************************************************************************************************/
+/***************************************************************************************************************************/
+
+#exp{  /*expériance professionelle */
+  font-size: 20px;
+  text-align: center;
+  border-bottom: solid black 1px ;
+}
+
+#p2{ /* 2012 à 2013 : Ripeur intérimaire  */
+  display: flex;
+  flex-direction: row;
+}
+
+#p3{ /* 2013 à 2014 : animateur  */
+  display: flex;
+  flex-direction: row;
+}
+
+#p{ /* 2008 - 2010 : CAP Electricien */
+  display: flex;
+  flex-direction: row;
+}
+
+#p1{ /* 2011 à 2012 : Employé de libre service */
+  display: flex;
+  flex-direction: row;
+}
+
+
+h4{
+  display: flex;
+  margin-left: 30px;
+  text-align: center;
+}
+
+#Date{
+  text-decoration:underline;
+
+}
+
+#SvgTicket{
+  display: flex;
+  margin-left: 50px;
+  margin-top: 10px;
+}
+
+#SVGelec{
+  display: flex;
+  margin-left: 30px;
+  margin-top: 14px;
+}
+
+#SVGMessage{
+}
+
+#SVGHtml{
+
+}
+
+#SVGCss{
+
+}
+
+#Codeur{
+  margin-left: 40px;
+}
+
+li{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40px;
+  text-align: center;
+}
+
+#bloc4{
+    margin-top: 15px;
+    border-top: solid black 1px ;
+}
+
+#formation{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+#Facebook{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 500px;
+}
+
+#twitter{
+    display: flex;
+    vertical-align: middle;
+    margin-top: -60px;
+    margin-left: 575px;
+}
+
+/* Responsive (fenêtres de moins de 640px) */
+@media only screen and (max-width: 1024px) and (min-width: 360px){
+
+  .wrapper {
+    flex-direction: column; /* affichage vertical */
+  }
+  header{
+    width: auto;
+  }
+  nav,
+  aside {
+    width: auto; /* pour écraser la valeur 10em */
+  }
+  footer,
+  nav,
+  aside,
+  footer,
+  article {
+    flex-basis: auto; /* pour écraser la valeur 0, due au flex: 1 */
+  }
+  nav {
+    order: -1; /* nav reprend sa place */
+  }
+}
+
+
+/* Decoration */
+
+body {
+  margin: 0
+  background: white;
+  font-family: 'Nunito' , arial, sans-serif;
+}
+
+a:link{
+  display: flex;
+  text-decoration: none;
+  font-size: 30px;
+  margin: center;
+  margin-top: 40px;
+  font-family: 
+}
+
+header{
+  height:200;
+  margin: -20;
+}
+nav,
+aside,
+article,
+footer {
+}
+
+header {
+  margin-left:0px;
+  background-image: url(IMG/couverture-facebook-Mario-Bros-nintendo.jpg2.jpg);
+  width: 100%;
+  height: 300px;
+}
+nav {
+  background: #2ecc71;
+}
+aside {
+  background: #2ecc71;
+}
+article {
+  background: #27ae60;
+}
+footer {
+  background: #2ecc71;
+  height: 100px;
+}
+
+
+
+/* @keyframes **/
